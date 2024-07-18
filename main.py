@@ -81,9 +81,9 @@ def main_body(audio_nombre, flag_segmentar_final_residual, largo_shorts_segundos
         cortar_segmento_wav(audio_url, directorio_destino, nombre, inicio, fin )
     if(flag_segmentar_final_residual and isinstance(len(audio), int)):
         i = math.trunc(len(audio) / (1000*largo_shorts_segundos))
-        nombre = f'{audio_nombre}--segmento{i}-{largo_shorts_segundos}seg.wav'
         inicio = i*largo_shorts_segundos
         fin = len(audio)/1000
+        nombre = f'{audio_nombre}--segmento{i}-{math.trunc(fin-inicio)}seg.wav'
         print(f'\n{inicio,fin}')
         cortar_segmento_wav(audio_url,directorio_destino, nombre,inicio,fin)
     print('FIN')
