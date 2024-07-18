@@ -1,3 +1,31 @@
+
+#! README:
+#CO'MO SE USA ESTE SCRIPT?
+#PARA EJECUTARLO, EL ARCHIVO MAIN.PY TIENE QUE ESTAR EN UNA CARPETA DONDE EXISTAN OTRAS DOS CARPETAS
+#LLAMADAS "input" Y "output", por ejemplo:
+#
+# - mi-carpeta
+#     L main.py
+#     L input
+#     L output
+#
+# con la terminal nos paramos sobre "mi-carpeta" y corremos el comando "python main.py" (o el python que corresponda)
+# el programa tomara' todos los archivos .wav de la carpeta input y dejara' los segmentos de cada uno en la carpeta output
+# ejemplo:
+# 
+# - mi-carpeta
+#     L main.py
+#     L input
+#        L mi-cancion.wav
+#     L output
+#        L mi-cancion--segmento-0-50seg.wav
+#        L mi-cancion--segmento-1-50seg.wav
+#        L mi-cancion--segmento-1-50seg.wav
+#
+#!fin README.
+
+
+
 from pydub import AudioSegment
 import math
 import glob
